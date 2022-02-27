@@ -1,21 +1,70 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+  // This starter template is using Vue 3 <script setup> SFCs
+  // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+  import NavigationBar from './components/NavigationBar.vue';
+  import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <NavigationBar />
+  <Footer />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less">
+  :root {
+    --primary-text-color: #000000;
+    --primary-text-color-inverse: #ffffff;
+    --primary-color: #42b983;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+  }
+
+  header,
+  body,
+  footer {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+  }
+
+  nav {
+    background-color: var(--primary-color);
+    padding: 16px;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 0 8px;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+      }
+    }
+
+    a {
+      color: var(--primary-text-color-inverse);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--primary-text-color);
+      }
+    }
+
+    header & a {
+      text-transform: uppercase;
+    }
+  }
 </style>
