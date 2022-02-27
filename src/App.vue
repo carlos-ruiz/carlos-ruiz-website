@@ -7,6 +7,7 @@
 
 <template>
   <NavigationBar />
+  <router-view></router-view>
   <Footer />
 </template>
 
@@ -61,10 +62,6 @@
       &:hover {
         color: var(--primary-text-color);
       }
-    }
-
-    header & a {
-      text-transform: uppercase;
     }
   }
 </style>

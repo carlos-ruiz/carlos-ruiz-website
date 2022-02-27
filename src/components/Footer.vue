@@ -8,8 +8,9 @@
           <li><a href="#">Contáctanos</a></li>
         </ul>
       </nav>
-      <div class="social">Social icons</div>
-      <div class="disclaimer">Copyright &copy; {{new Date().getFullYear()}} Carlos Ruiz</div>
+      <div class="disclaimer">
+        Copyright &copy; {{ new Date().getFullYear() }} Carlos Ruiz
+      </div>
     </div>
   </footer>
 </template>
@@ -18,9 +19,17 @@
   footer {
     background-color: #42b983;
     padding: 16px;
+    text-align: center;
 
     nav {
       padding: 0;
+
+      ul {
+        justify-content: center;
+      }
+    }
+
+    .disclaimer {
     }
   }
 </style>
