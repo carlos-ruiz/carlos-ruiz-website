@@ -7,7 +7,9 @@
 
 <template>
   <NavigationBar />
-  <router-view></router-view>
+  <main class="container">
+    <router-view></router-view>
+  </main>
   <Footer />
 </template>
 
@@ -22,9 +24,13 @@
   }
 
   html {
+    font-size: 62.5%;
+  }
+
+  html, body {
     margin: 0;
     padding: 0;
-    font-size: 62.5%;
+    height: 100%;
   }
 
   header,
@@ -33,6 +39,12 @@
     margin: 0;
     padding: 0;
     font-size: 1.6rem;
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   nav {
@@ -63,5 +75,9 @@
         color: var(--primary-text-color);
       }
     }
+  }
+
+  main.container {
+    flex-grow: 1;
   }
 </style>
