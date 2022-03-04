@@ -10,8 +10,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  plugins: [vue()],
-  server: {
-    port: parseInt(process.env.PORT) || 3000
-  }
+  plugins: [vue()]
 })
