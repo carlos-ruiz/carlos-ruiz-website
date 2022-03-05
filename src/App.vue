@@ -15,9 +15,14 @@
 
 <style lang="less">
   :root {
-    --primary-text-color: #000000;
-    --primary-text-color-inverse: #ffffff;
-    --primary-color: #42b983;
+    --primary-text-color: #d3edea;
+    --primary-text-color-inverse: #09333f;
+    --primary-color: #009d9a;
+    --secondary-color: #26f7b2;
+    --background-color: #09333f;
+
+    --font-1: 'DM Sans', sans-serif;
+    --font-2: 'Roboto', sans-serif;
   }
   * {
     box-sizing: border-box;
@@ -33,12 +38,17 @@
     height: 100%;
   }
 
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-1);
+  }
+
   header,
   body,
   footer {
     margin: 0;
     padding: 0;
     font-size: 1.6rem;
+    font-family: var(--font-2);
   }
 
   #app {
@@ -50,11 +60,12 @@
   nav {
     background-color: var(--primary-color);
     padding: 16px;
+    font-weight: 700;
 
     ul {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center;
       list-style: none;
       padding: 0;
 
@@ -68,11 +79,11 @@
     }
 
     a {
-      color: var(--primary-text-color-inverse);
+      color: var(--primary-text-color);
       text-decoration: none;
 
       &:hover {
-        color: var(--primary-text-color);
+        color: var(--primary-text-color-inverse);
       }
     }
   }
