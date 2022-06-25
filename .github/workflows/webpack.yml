@@ -27,6 +27,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        args: >
+          -Dsonar.organization=carlos-ruiz
+          -Dsonar.projectKey=carlos-ruiz_carlos-ruiz-website
 
     - name: Build
       run: |
