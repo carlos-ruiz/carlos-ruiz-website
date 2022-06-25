@@ -58,7 +58,7 @@
   }
 
   nav {
-    background-color: var(--primary-color);
+    background-color: transparent;
     padding: 16px;
     font-weight: 700;
 
@@ -80,15 +80,36 @@
 
     a {
       color: var(--primary-text-color);
+      letter-spacing: 1px;
       text-decoration: none;
 
       &:hover {
-        color: var(--primary-text-color-inverse);
+        border-bottom: 1px solid var(--primary-text-color);
+        transition: border-bottom 3s;
       }
     }
   }
 
-  main.container {
-    flex-grow: 1;
-  }
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+}
+
+main.container {
+  flex-grow: 1;
+}
 </style>
