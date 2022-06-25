@@ -17,7 +17,7 @@
 
 <style lang="less" scoped>
   footer {
-    background-color: var(--primary-color);
+    background-color: transparent;
     padding: 16px;
     text-align: center;
 

@@ -5,7 +5,7 @@
     <nav>
       <ul>
         <li>
-          <router-link to="/"
+          <router-link to="/" class="nav-icon"
             ><img src="@/assets/only-logo.svg" alt="site-logo"
           /></router-link>
         </li>
@@ -18,10 +18,16 @@
 </template>
 
 <style lang="less" scoped>
-  header nav ul img {
-    max-height: 50px;
-    svg {
-      fill: var(--primary-text-color);
+  header nav ul {
+    img {
+      max-height: 50px;
+      svg {
+        fill: var(--primary-text-color);
+      }
+    }
+
+    .nav-icon:hover {
+      border: 0;
     }
   }
 </style>
