@@ -36,3 +36,11 @@ jobs:
       run:
         npm install
         npm run build
+
+  deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploying to Heroku
+        run:
+          - dpl --provider=heroku --app=$HEROKU_DEV_APP_NAME --api-key=$HEROKU_API_KEY
