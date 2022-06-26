@@ -36,7 +36,3 @@ jobs:
       run:
         npm install
         npm run build
-
-    - name: Deploy to Heroku
-      run:
-        - dpl --provider=heroku --app=$HEROKU_DEV_APP_NAME --api-key=$HEROKU_API_KEY
