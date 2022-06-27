@@ -38,6 +38,7 @@ jobs:
         npm run build
 
   deployment:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -53,7 +54,7 @@ jobs:
 
     - name: Pushing files to heroku
       run:
-        cd dist
+        cd ./dist/
         echo ${{ secrets.PRODUCTION_DOMAIN }} > CNAME
 
     - name: Init git files
