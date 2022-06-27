@@ -45,7 +45,7 @@ jobs:
 
     - name: Setting heroku buildpack
       run:
-        heroku buildpacks:set https://github.com/heroku/heroku-buildpack-static.git
+        heroku buildpacks:set https://github.com/heroku/heroku-buildpack-static.git --app ${{secrets.HEROKU_DEV_APP_NAME}}
 
     - name: Copy static file to source folder
       run:
