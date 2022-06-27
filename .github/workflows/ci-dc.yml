@@ -36,3 +36,28 @@ jobs:
       run:
         npm install
         npm run build
+
+  deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setting heroku buildpack
+      run:
+        heroku buildpacks:set https://github.com/heroku/heroku-buildpack-static.git
+
+    - name: Copy static file to source folder
+      run:
+        cp -a static.json dist/
+
+    - name: Pushing files to heroku
+      run:
+        cd dist
+        echo ${{ secrets.PRODUCTION_DOMAIN }} > CNAME
+        git init
+        git checkout -b main
+        git add .
+        git commit -m "My site ready for deployment."
+        git remote add heroku ${{ secrets.HEROKU_GIT_REPO }}
+        git push heroku main
