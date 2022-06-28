@@ -56,10 +56,6 @@ jobs:
       run: |
         cd ./dist/
         echo ${{ secrets.PRODUCTION_DOMAIN }} > CNAME
-
-    - name: Init git files
-      run: |
-        ls
         git init
         git config --global user.email "car.ruiz90@gmail.com"
         git config --global user.name "Carlos Ruiz"
