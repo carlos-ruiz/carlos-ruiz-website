@@ -53,18 +53,18 @@ jobs:
         cp -a static.json dist/
 
     - name: Pushing files to heroku
-      run:
+      run: |
         cd ./dist/
         echo ${{ secrets.PRODUCTION_DOMAIN }} > CNAME
 
     - name: Init git files
-      run:
+      run: |
         git init
         git checkout -b main
         git add .
         git commit -m "My site ready for deployment."
 
     - name: Pushing data to Heroku
-      run:
+      run: |
         git remote add heroku ${{ secrets.HEROKU_GIT_REPO }}
         git push heroku main
