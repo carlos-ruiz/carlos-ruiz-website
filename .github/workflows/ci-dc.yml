@@ -66,4 +66,4 @@ jobs:
     - name: Pushing data to Heroku
       run: |
         git remote add heroku ${{ secrets.HEROKU_GIT_REPO }}
-        git push heroku main
+        git push heroku master
