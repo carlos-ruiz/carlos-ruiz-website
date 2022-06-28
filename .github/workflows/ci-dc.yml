@@ -63,4 +63,4 @@ jobs:
         git add .
         git commit -m "My site ready for deployment."
         git remote add heroku ${{ secrets.HEROKU_GIT_REPO }}
-        git push -u heroku master
+        git push -u heroku main
