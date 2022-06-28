@@ -42,25 +42,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Setting heroku buildpack
-      run:
-        heroku buildpacks:set https://github.com/heroku/heroku-buildpack-static.git --app ${{secrets.HEROKU_DEV_APP_NAME}}
-
-    - name: Copy static file to source folder
-      run:
-        cp -a static.json dist/
-
-    - name: Pushing files to heroku
-      run: |
-        cd ./dist/
-        echo ${{ secrets.PRODUCTION_DOMAIN }} > CNAME
-        git init
-        git config --global user.email "car.ruiz90@gmail.com"
-        git config --global user.name "Carlos Ruiz"
-        git checkout -b main
-        git add .
-        git commit -m "My site ready for deployment."
-        git remote add heroku ${{ secrets.HEROKU_GIT_REPO }}
-        git push -u heroku main
+      - uses: actions/checkout@v3
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_DEV_APP_NAME}}
+          heroku_email: ${{secrets.EMAIL}}
