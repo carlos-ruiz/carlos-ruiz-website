@@ -62,8 +62,5 @@ jobs:
         git checkout -b main
         git add .
         git commit -m "My site ready for deployment."
-
-    - name: Pushing data to Heroku
-      run: |
         git remote add heroku ${{ secrets.HEROKU_GIT_REPO }}
         git push heroku master
