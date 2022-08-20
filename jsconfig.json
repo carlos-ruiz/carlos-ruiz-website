@@ -1,9 +1,9 @@
 {
-  "include": [
-    "./src/**/*"
-  ],
+  "include": ["./src/**/*"],
   "compilerOptions": {
+    "strict": true,
     "base": ".",
+    "isolatedModules": true,
     "paths": {
       "@/*": ["./src/*"]
     }

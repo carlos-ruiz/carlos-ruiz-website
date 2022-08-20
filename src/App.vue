@@ -1,8 +1,8 @@
 <script setup lang="ts">
   // This starter template is using Vue 3 <script setup> SFCs
   // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-  import NavigationBar from './components/NavigationBar.vue';
-  import Footer from './components/Footer.vue';
+  import NavigationBar from './components/NavigationBar.vue'
+  import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -32,13 +32,18 @@
     font-size: 62.5%;
   }
 
-  html, body {
+  html,
+  body {
     margin: 0;
     padding: 0;
     height: 100%;
   }
 
-  h1, h2, h3, h4, h5 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     font-family: var(--font-1);
   }
 
@@ -90,26 +95,25 @@
     }
   }
 
-html * {
-  box-sizing: border-box;
-}
+  html * {
+    box-sizing: border-box;
+  }
 
-body {
-  font-size: 16px;
-  padding: 10px;
-  color: #ffffff;
-  text-align: center;
-  height: 100vh;
-  margin: 0;
-  overflow: hidden;
-  height: 100vh;
-}
+  body {
+    font-size: 16px;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
 
-.container {
-  width: 100%;
-}
+  .container {
+    width: 100%;
+  }
 
-main.container {
-  flex-grow: 1;
-}
+  main.container {
+    flex-grow: 1;
+  }
 </style>
