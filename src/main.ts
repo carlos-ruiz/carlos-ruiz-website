@@ -10,10 +10,8 @@ const router = createRouter({
   routes: [
     { path: '/', name: 'Home', component: Home },
     { path: '/contact', name: 'Contact', component: Contact },
-    { path: '/about', name: 'About', component: About }
-  ]
+    { path: '/about', name: 'About', component: About },
+  ],
 })
 
-createApp(App)
-  .use(router)
-  .mount('#app')
+createApp(App).use(router).mount('#app')
