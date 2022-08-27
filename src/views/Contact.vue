@@ -1,18 +1,18 @@
 <template>
   <h1>Contact {{ msg }}</h1>
-  <span>Computed: {{ testComputed }}</span>
+  <span>Contact information: {{ testComputed }}</span>
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
   export default defineComponent({
     data() {
       return {
-        msg: 'message',
+        msg: 'to be defined',
       }
     },
     computed: {
       testComputed(): string {
-        return 'computed ' + this.msg
+        return 'Info ' + this.msg
       },
     },
   })
