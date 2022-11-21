@@ -15,11 +15,9 @@
 
 <style lang="less">
   :root {
-    --primary-text-color: #d3edea;
-    --primary-text-color-inverse: #09333f;
-    --primary-color: #009d9a;
-    --secondary-color: #26f7b2;
-    --background-color: #09333f;
+    --primary-text-color: #d6f1f6;
+    --primary-color: #4fffa0;
+    --background-color: #1c1d22;
 
     --font-1: 'DM Sans', sans-serif;
     --font-2: 'Roboto', sans-serif;
